@@ -307,8 +307,8 @@ return (
 )}
   <View style={{position: 'absolute',zIndex: 10,top:0,left:0,width: '100%',height: 150,paddingTop: 25,backgroundColor:'white',opacity: 0.7, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
     <Text style={{fontSize: 50}}>Nikki</Text>
-    <Text style={{fontSize: 20}}>Level {state.character.level}</Text>
-    <Progress.Bar progress={state.character.experience/10000} color="green" width={200} />
+    <Text style={{fontSize: 12}}>Level {state.character.level}</Text>
+    <Progress.Bar progress={state.character.experience/100} color="green" width={200} />
     <Steps/>
   </View>
 

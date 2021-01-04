@@ -11,7 +11,8 @@ export default function Steps() {
   let _subscription;
 
   const UpdateStepDataContext = (stepData) => {
-    setState({...state,stepData: stepData});
+    const experience = Math.abs(state.stepData.currentStepCount - stepData.currentStepCount);
+    setState({...state,character: {...state.character,experience: state.character.experience + experience},stepData: stepData});
   }
 
   const _subscribe = () => {
@@ -36,8 +37,7 @@ export default function Steps() {
     start.setDate(end.getDate() - 1);
     Pedometer.getStepCountAsync(start, end).then(
       result => {
-        setPastStepCount(result.steps);
-        UpdateStepDataContext({currentStepCount: 0,isAvialable: isAvialable,pastStepCount:pastStepCount});
+        setPastStepCount(result.steps)
 
       },
       error => {
@@ -60,7 +60,7 @@ export default function Steps() {
 
     return (
       <View style={styles.container}>
-        <Text style={{fontSize: 10}}>{JSON.stringify(state.stepData)}</Text>
+      <Text style={{fontSize: 20}}>{state.stepData.currentStepCount == 0 ? 'Walk a few steps' : '👣:' + (state.stepData.pastStepCount+state.stepData.currentStepCount)}</Text>
       </View>
     );
 }
