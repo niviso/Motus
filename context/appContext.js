@@ -13,7 +13,7 @@ const AppProvider = (props) => {
       currentStepCount: 0,
     },
     character: {
-      name: "",
+      name: "Nikki",
       profileImage: null,
       level: 1,
       experience: 0,
