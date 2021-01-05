@@ -1,7 +1,6 @@
 import React,{useEffect,useState,useContext} from 'react';
 import { View, Text,TouchableOpacity,Button,Image,Alert  } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import Steps from '../../steps.js';
 import {AppContext} from '../../context/appContext';
 import * as Progress from 'react-native-progress';
 import moment from 'moment';

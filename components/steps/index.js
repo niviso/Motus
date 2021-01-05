@@ -1,7 +1,7 @@
 import React, {useState, useEffect,useContext} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Pedometer } from 'expo-sensors';
-import {AppContext} from './context/appContext';
+import {AppContext} from '../../context/appContext';
 
 export default function Steps() {
   const [state,setState] = useContext(AppContext);
