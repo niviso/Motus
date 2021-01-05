@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {AppProvider} from './context/appContext';
 import GameScreen from './screens/gameScreen/';
-import Menu from './components/menu';
+import NavBar from './components/navbar';
 import ProfileImages from './components/profileImages';
 import { Logs } from 'expo'
 Logs.enableExpoCliLogging()
@@ -38,7 +38,7 @@ function App() {
         <Stack.Screen name="GameScreen" component={GameScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-    <Menu/>
+    <NavBar/>
     </AppProvider>
   );
 }
